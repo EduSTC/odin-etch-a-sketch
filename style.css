@@ -1,0 +1,41 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#header {
+
+}
+
+#content {
+    flex: 1;
+    display: flex;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+}
+
+#canvas {
+    width: 640px;
+    height: 640px;
+    display: flex;
+}
+
+#column {
+}
+
+.square {
+    border: solid 1px black;
+}
+
+
+
+.square:hover {
+    background-color: black;
+}
