@@ -1,17 +1,28 @@
 canvasSquares(16);
 const color = "black";
 
+
+let mouseIsDown = false;
+
+document.body.addEventListener('mousedown', () => {
+    mouseIsDown = true;
+});
+
+document.body.addEventListener('mouseup', () => {
+    mouseIsDown = false;
+});
+
+
 // https://www.w3schools.com/jsref/dom_obj_event.asp
 // https://stackoverflow.com/questions/47641309/combine-mouse-events-in-javascript
 const squares = document.querySelectorAll('.square');
 squares.forEach((square) => {
     square.addEventListener('mousemove', () => {
-        square.setAttribute('style', 'background-color: ' + color);
+        if (mouseIsDown == true) {
+            square.setAttribute('style', 'background-color: ' + color);
+        }
     });
 })
-
-
-
 
 
 function canvasSquares(num) {
