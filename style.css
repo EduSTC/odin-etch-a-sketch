@@ -4,8 +4,9 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    background-color: rgb(78, 80, 72); 
 }
 #header {
 
@@ -19,12 +20,25 @@ body {
 #menu {
     display: flex;
     flex-direction: column;
+    height: 640px;
+    text-align: center;
+    background-color: rgb(65, 52, 52);
+    color: white;
+}
+
+#menu > * {
+    flex: 1;
+}
+
+h2 {
+    font-size: 18px;
 }
 
 #canvas {
     width: 640px;
     height: 640px;
     display: flex;
+    background-color: white;
 }
 
 .column {
