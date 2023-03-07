@@ -1,6 +1,7 @@
-// createSquares(16);
-const color = "black";
-let lastColor = color;
+
+let color = "black";
+let lastColor = "black";
+let colorIsRandom = false;
 
 
 let mouseIsDown = false;
@@ -25,11 +26,54 @@ slider.oninput = function() {
     createSquares(this.value);
 }
 
+let eraserButton = document.getElementById('eraser');
+eraserButton.addEventListener('click', () => {
+    colorIsRandom = false;
+    lastColor = color;
+    color = "white";
+});
+
+
+let pencilButton = document.getElementById('last-color');
+pencilButton.addEventListener('click', () => {
+    colorIsRandom = false;
+    color = lastColor;
+});
 
 
 
+let clearButton = document.getElementById('clear');
+clearButton.addEventListener('click', () => {
+    colorIsRandom = false;
+    createSquares(slider.value);
+});
 
+let colorButton = document.getElementById('color-select');
+colorButton.addEventListener('change', () => {
+    colorIsRandom = false;
+    color = colorButton.value;
+});
 
+let rgbButton = document.getElementById('rgb');
+
+rgbButton.addEventListener('click', () => {
+    if (colorIsRandom == false) {
+        colorIsRandom = true;
+    } else {
+        colorIsRandom = false;
+    }
+});
+
+document.body.addEventListener('mouseover', () => {
+    if (colorIsRandom) {
+        randomizeColors();
+    }
+})
+
+function randomizeColors() {
+    color = "rgb(" + Math.random() * 256 + "," + Math.random() * 256 
+    + "," + Math.random() * 256 + ")";
+}
 
 function createSquares(num) {
     let containerCanvas = document.getElementById('canvas');
@@ -53,6 +97,7 @@ function enablePainting() {
     const squares = document.querySelectorAll('.square');
     squares.forEach((square) => {
         square.addEventListener('mousemove', () => {
+            document.documentElement.style.setProperty('--hoverColor', color);
             if (mouseIsDown == true) {
                 square.setAttribute('style', 'background-color: ' + color);
             }
@@ -65,6 +110,7 @@ function resetSquares(squareArea) {
         squareArea.removeChild(squareArea.firstChild);
     }
 }
+
 
 
 

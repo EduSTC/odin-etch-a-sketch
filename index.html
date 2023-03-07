@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Etch a Sketch</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
@@ -22,7 +22,11 @@
         <div id="menu">
             <div>
                 <h2>Color</h2>
-                <button id="color-select"><img src="images/paint-svgrepo-com.svg"></button>
+                <input type="color" autocomplete="off" id="color-select">
+            </div>
+            <div>
+                <h2>Pencil</h2>
+                <button id="last-color"><img src="images/paint-svgrepo-com.svg"></button>
             </div>
             <div>
                 <h2>GrayScale</h2>
@@ -49,7 +53,7 @@
     <div id="footer">
         <div id="credits">
             <h3>Made by Eduardo Smallwood</h3>
-            <img src="#">
+            <img src="images/iconmonstr-github-1.svg">
             <h3>| Project from The Odin Project</h3>
         </div>
     </div>

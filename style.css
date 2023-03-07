@@ -1,15 +1,30 @@
+:root {
+    --hoverColor: black;
+}
+
 body {
     min-height: 100vh;
     margin: 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    background-color: rgb(151, 155, 141); 
+    background-color: rgb(176, 237, 245); 
 }
+
 #header {
     text-align: center;
+    margin-top: 20px;
+}
+
+#header > h1 {
+    font-size: 36;
+    margin: 0;
+}
+
+#header > h2 {
+    font-size: 22px;
+
 }
 
 #grid-container {
@@ -32,8 +47,9 @@ body {
 }
 
 #content {
-    flex: 1;
+    margin-top: 36px;
     display: flex;
+    flex: 1;
 }
 
 #menu {
@@ -41,7 +57,7 @@ body {
     flex-direction: column;
     height: 640px;
     text-align: center;
-    background-color: rgb(65, 52, 52);
+    background-color: rgb(0, 0, 0);
     color: white;
 }
 
@@ -49,8 +65,17 @@ body {
     flex: 1;
 }
 
+#color-select {
+    height: 50px;
+    width: 50px;
+    background-color:rgb(204, 197, 197);
+    border-radius: 5px;
+    border-color: black;
+}
+
 h2 {
-    font-size: 18px;
+    font-size: 15px;
+    padding: 0px 5px;
 }
 
 #canvas {
@@ -58,6 +83,7 @@ h2 {
     height: 640px;
     display: flex;
     background-color: white;
+    
 }
 
 .column {
@@ -67,18 +93,16 @@ h2 {
 }
 
 .square {
-    border: solid 1px black;
+    border: solid 1px rgb(221, 212, 212);
     flex: 1;
 }
 
-
-
 .square:hover {
-    background-color: black;
+    background-color: var(--hoverColor)!important;
 }
 
 button {
-    background-color:rgb(250, 204, 204);
+    background-color:rgb(204, 197, 197);
     border-color: black;
     border-radius: 5px;
     height: 50px;
