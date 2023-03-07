@@ -6,9 +6,28 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(78, 80, 72); 
+    background-color: rgb(151, 155, 141); 
 }
 #header {
+    text-align: center;
+}
+
+#grid-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#grid-container > p {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+#slider {
+    width: 100%;
+    margin: 0;
 
 }
 
@@ -57,3 +76,37 @@ h2 {
 .square:hover {
     background-color: black;
 }
+
+button {
+    background-color:rgb(250, 204, 204);
+    border-color: black;
+    border-radius: 5px;
+    height: 50px;
+    width: 50px;
+}
+img {
+    height: 100%;
+    width: 100%;
+
+}
+
+#footer {
+    align-self: stretch;
+    background-color: #ffebcd;
+    text-align: center;
+}
+
+#credits {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+
+}
+
+#credits > img {
+    width: 25px;
+    height: 25px;
+}
+
+

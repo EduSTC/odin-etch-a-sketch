@@ -11,30 +11,47 @@
 <body>
     <div id="header">
         <h1>Etch a Sketch Project</h1>
+        <h2>How many squares do you want?</h2>
+        <div id="grid-container">
+            <input autocomplete="off" type="range" min="16" max="64" value="16" id="slider"/>
+            <p id="grid-value">value</p>
+        </div>
+
     </div>
     <div id="content">
         <div id="menu">
             <div>
                 <h2>Color</h2>
-                <button id="color-select"><img src="#"></button>
+                <button id="color-select"><img src="images/paint-svgrepo-com.svg"></button>
             </div>
             <div>
-                <h2>Eraser</h2>
-                <button id="eraser"><img src="#"></button>
-            </div>
-            <div>
-                <h2>Clear</h2>
-                <button id="clear"><img src="#">></button>
+                <h2>GrayScale</h2>
+                <button id="gray-scale"><img src="images/paint-5-svgrepo-com.svg"></button>
             </div>
             <div>
                 <h2>RGB</h2>
-                <button id="clear"><img src="#">></button>
+                <button id="rgb"><img src="images/paint-pallet-svgrepo-com.svg"></button>
             </div>
+            <div>
+                <h2>Eraser</h2>
+                <button id="eraser"><img src="images/eraser-svgrepo-com.svg"></button>
+            </div>
+            <div>
+                <h2>Clear</h2>
+                <button id="clear"><img src="images/paint-roller-2-svgrepo-com.svg"></button>
+            </div>
+            
         </div>
         <div id="canvas">
             
         </div>
     </div>
-    <div id="footer"></div>
+    <div id="footer">
+        <div id="credits">
+            <h3>Made by Eduardo Smallwood</h3>
+            <img src="#">
+            <h3>| Project from The Odin Project</h3>
+        </div>
+    </div>
 </body>
 </html>
