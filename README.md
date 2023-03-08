@@ -10,7 +10,6 @@ This website was made using plain HTML, CSS and JavaScript.
 * Multiple size canvas
 * Clear button
 * Random RGB colors button
-* Grayscale button
 
 # Self-Reflection
 Before starting I thought it would be very though but with the hint of using multiple divs everything came smoothly, I needed to search a lot offcourse but I could break the problem in multiple parts and search each one of them until it was done.

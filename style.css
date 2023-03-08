@@ -63,6 +63,7 @@ body {
 
 #menu > * {
     flex: 1;
+    padding: 0px 8px;
 }
 
 #color-select {
